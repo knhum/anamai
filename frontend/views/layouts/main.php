@@ -33,8 +33,14 @@ MaterialAsset::register($this);
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
             ]);
+            $report_mnu_itms[] = ['label' => 'ศาสนา', 'url' => ['report/index']];
+             $report_mnu_itms[] = ['label' => 'ประชากร', 'url' => ['pop/index']];
+             
             $menuItems = [
                 ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => 'รายงานข้อมูลผลงาน',
+                    'items' => $report_mnu_itms
+                ],
                 ['label' => 'About', 'url' => ['/site/about']],
                 ['label' => 'Contact', 'url' => ['/site/contact']],
             ];
